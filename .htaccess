@@ -1,0 +1,7 @@
+# PHP RIGEN -----------------------------------------------
+RewriteEngine On
+RewriteBase /rigen/
+
+RewriteCond %{REQUEST_URI} !img-cache
+RewriteRule ^(.*\.(?:jpe?g|jpg|gif|png))$ _rigen.php?$1 [NC,L]
+# =========================================================
