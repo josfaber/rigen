@@ -25,3 +25,11 @@ location ~* /rigen/.*/(.*)\.(gif|jpg|png|jpeg)$ {
     rewrite ^/rigen/(.*)$ /rigen/_rigen.php?$1 last;
 }
 ```
+## How it works
+The javascript stores the users screen size in a cookie. At the moment an image is requested further down the html, it is redirected through `_rigen.php`, which will handle the request in this order:
+
+1. If the image dimensions are smaller than the users size, serve the original image
+2. If the the image is bigger, check the cache dir for a scaled down version for the next (downward) breakpoint (configurable)
+3. Compare the cached file timestamp to the original file timestamp
+4. Regenerate the cache file if not available or outdated
+5. Serve the cache file
