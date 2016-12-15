@@ -3,7 +3,7 @@ Responsive Images Generator (PHP)
 
 A script that automatically scales requested image based on the requesting device's screen. It's a cookie based solution with a backup that checks the useragent string for "mobile".  
 
-This software is a simplified version of [PHP Adaptive Images (PHP-AI)](https://github.com/MattWilcox/Adaptive-Images) and was created to work with both [Apache](http://www.apache.org) and [NGINX](http://www.nginx.com) in a quick and easy way.
+This software is a simplified version of the awesome [PHP Adaptive Images (PHP-AI)](https://github.com/MattWilcox/Adaptive-Images) (no longer maintained) and was created to work with both [Apache](http://www.apache.org) and [NGINX](http://www.nginx.com) in a quick and easy way.
 
 ## How to
 1. create cache dir (write access) and update `_rigen.php` with dir name
